@@ -122,6 +122,15 @@ air_quality/
 
 **Note**: The `AirQualityUCI.csv` file is not included in the repository for privacy reasons. See the Installation section above for download instructions.
 
+## Current Issues & Backlog
+
+### Issue #1: Handle Missing Data Values (-200)
+**Reference**: [Issue #1: Handle Missing Data Values (-200)](https://github.com/alamdari/CPSC620-air-quality-dashboard/issues/1)
+
+The dataset contains missing values represented as -200, which need to be properly handled in the data processing pipeline. This affects data visualization accuracy and analysis results.
+
+**For Students**: When your team forks this repository, **create the same issue** in your fork and work collaboratively to resolve it. This models a real Agile backlog item and helps you practice issue tracking, branching, and pull-request workflows.
+
 ## Development Workflow
 
 ### 1. **Setup Team Repository**
