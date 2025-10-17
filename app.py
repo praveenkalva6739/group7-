@@ -146,3 +146,23 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+st.sidebar.title("Dashboard Controls")
+
+pollutant = st.sidebar.selectbox(
+    "Select pollutant to visualize:",
+    ["CO(GT)", "C6H6(GT)", "NOx(GT)", "NO2(GT)", "T", "RH"]
+)
+
+st.title("Air Quality Dashboard")
+st.write(f"Currently showing data for: **{pollutant}**")
+
+# Load data (from analysis.py or directly)
+df = pd.read_csv("data/AirQualityUCI.csv", sep=';', decimal=',')
+df.replace(-200, np.nan, inplace=True)
+
+st.line_chart(df[pollutant])
